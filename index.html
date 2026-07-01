@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada's website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        #main-header {
+            background-color: #1a2a3a;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #main-header h1 {
+            margin: 0 0 10px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .card-section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-section h2 {
+            color: #0080ff;
+            margin-top: 0;
+            border-bottom: 2px solid #f4f7f6;
+            padding-bottom: 5px;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .project-link {
+            color: #03376a;
+            font-weight: bold;
+        }
+
+        /* --- Cutesy Silly Section Styling --- */
+        .silly-card h2 {
+            color: #ff6b81; /* Pretty pastel pink */
+        }
+
+        .cute-btn {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px; /* Makes the button round and cute */
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 0 #e05266;
+            transition: all 0.1s ease;
+        }
+
+        .cute-btn:active {
+            transform: translateY(4px); /* Makes it click downward */
+            box-shadow: none;
+        }
+
+        .pet-counter {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff4757;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1>Welcome to Ada's website!</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#silly-zone">minigame</a>
+        </nav>
+    </header>
+
+    <section id="about" class="card-section">
+        <h2>About Me</h2>
+        <p>I'm Ada, a 15-year-old inventor from Türkiye who's currently partaking in the stardance challenge by hackclub and NASA. This site is a product of said challenge!</p>
+        
+        <img src="img_3172.jpeg" alt="my dog :3" class="profile-img">
+    </section>
+
+    <section id="projects" class="card-section">
+        <h2>Projects</h2>
+        <p>Encrypter-decrypter, ATYS, this website, etc.</p>
+        
+        <p>Check out my work here: <a href="https://www.linkedin.com/in/ada-bardiz-b1a2092bb" class="project-link">open linkedin</a></p>
+        <p>WIP Projects sometimes get posted on my github: <a href="https://github.com/" class="project-link">open github</a></p>
+    </section>
+
+        <h2>minigame </h2>
+        <p>give my dog some  love! click the button to pet her:</p>
+        
+        <button class="cute-btn" onclick="petTheDog()">pet the dog! </button>
+        
+        <p class="pet-counter">Total Pets: <span id="pet-count">0</span></p>
+    </section>
+
+    <script>
+        let petCount = 0;
+
+        function petTheDog() {
+            petCount++; 
+            document.getElementById("pet-count").textContent = petCount;
+
+            if (petCount === 10) {
+                alert("wow! The dog is now super happy ");
+            }
+        }
+    </script>
+
+</body>
+</html>
