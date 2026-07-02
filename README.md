@@ -13,3 +13,4 @@ My website consists of three sections: About, Projects & Minigame
 CREDITS / AI USE:
 
 I used Gemini when I couldn't get the image of my dog to load on the website's demo. 
+Credits to ProgrammingWithMosh's HTML tutorial as I used his video to learn how to code in HTML.
