@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ada's website</title>
+
+<style>
+
+body{
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    background:#f4f7f6;
+    color:#333;
+    line-height:1.6;
+    padding:20px;
+    margin:0;
+}
+
+.profile-img{
+    width:100%;
+    max-width:300px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+
+#main-header{
+    background:#1a2a3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:8px;
+}
+
+#main-header h1{
+margin-bottom:10px;
+margin-top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+margin:0 10px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.card-section{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+box-shadow:0 4px 6px rgba(0,0,0,.05);
+}
+
+.card-section h2{
+color:#0080ff;
+margin-top:0;
+border-bottom:2px solid #f4f7f6;
+padding-bottom:5px;
+}
+
+
+.project-link{
+color:#03376a;
+font-weight:bold;
+}
+
+
+.cute-btn{
+background:#ff6b81;
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+box-shadow:0 4px 0 #e05266;
+transition:.1s;
+}
+
+.cute-btn:active{
+transform:translateY(4px);
+box-shadow:none;
+}
+
+.pet-counter{
+font-size:18px;
+font-weight:bold;
+color:#ff4757;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header id="main-header">
+<h1>Welcome to Ada's website!</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#silly-zone">minigame</a>
+</nav>
+
+</header>
+
+
+<section id="about" class="card-section">
+
+<h2>About Me</h2>
+
+<p> hi!! i'm ada and i made this because of the hackclub stardance challenge :D </p>
+<img src="img_3172.jpeg" alt="my dog :3" class="profile-img">
+
+</section>
+
+
+<section id="projects" class="card-section">
+
+<h2>Projects</h2>
+
+<p>Encrypter-decrypter, ATYS, this website, and a few other random things.</p>
+
+<p>
+Check out my LinkedIn:
+<a class="project-link" href="https://www.linkedin.com/in/ada-bardiz-b1a2092bb">open linkedin</a>
+</p>
+
+<p>
+Sometimes I post WIP stuff on GitHub:
+<a class="project-link" href="https://github.com/">open github</a>
+</p>
+
+</section>
+
+
+<section id="silly-zone" class="card-section">
+
+<h2>minigame</h2>
+
+<p> pls pet my dog she deserves it</p>
+
+<button onclick="petTheDog()" class="cute-btn">
+pet the dog!
+</button>
+
+<p class="pet-counter">
+Total Pets:
+<span id="pet-count">0</span>
+</p>
+
+</section>
+
+
+<script>
+
+let pets = 0;
+
+function petTheDog(){
+
+    pets++;
+
+    document.getElementById("pet-count").textContent = pets;
+
+    if(pets == 10){
+        alert("yay!! she's super happy now :D");
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
