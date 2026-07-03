@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ada's website</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#fff8fc,#f7faff);
+    color:#444;
+    margin:0;
+    padding:20px;
+}
+.profile-img{
+    width:260px;
+    border-radius:10px;
+    display:block;
+    margin:auto;
+
+    border:6px solid white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.15s;
+}
+
+#main-header{
+    background:#ff9ec7;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:20px;
+}
+
+#main-header h1{
+    margin-bottom:10px;
+    margin-top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 10px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.card-section{
+ background:white;
+padding:25px;
+margin:30px auto;
+border-radius:20px;
+max-width:700px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    transition:.25s;
+}
+
+.card-section:hover{
+    transform:translateY(-5px);
+}
+
+.card-section h2{
+color:#ff6b9d;
+ margin-top:0;
+border-bottom:2px solid #ffe6f0;
+padding-bottom:5px;
+}
+
+.project-link{
+color:#ff5f94;
+font-weight:bold;
+}
+
+.project-link:hover{
+    color:#ff2f76;
+}
+
+.cute-btn{
+background:linear-gradient(135deg,#ff8eb6,#ff6b81);
+color:white;
+border:none;
+border-radius:999px;
+padding:14px 28px;
+font-weight:bold;
+font-size:17px;
+cursor:pointer;
+transition:.2s;
+box-shadow:0 8px 18px rgba(255,107,129,.3);
+}
+
+.cute-btn:hover{
+transform:scale(1.05);
+}
+
+.cute-btn:active{
+transform:translateY(4px);
+    box-shadow:none;
+}
+
+.pet-counter{
+font-size:18px;
+font-weight:bold;
+color:#ff4757;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header id="main-header">
+
+<h1> Welcome to Ada's website! </h1>
+
+<p> made with lots of coffee (yes, I know I sound like a millenial) </p>
+
+<nav>
+<a href="#about"> about</a>
+<a href="#projects">projects</a>
+<a href="#silly-zone">minigame</a>
+</nav>
+
+</header>
+
+
+<section id="about" class="card-section">
+
+<h2> About Me</h2>
+
+<p>hi!! i'm ada and i made this because of the hackclub stardance challenge :D</p>
+
+<img
+id="dog"
+src="IMG_3172.jpeg"
+alt="my dog Laika"
+class="profile-img">
+
+</section>
+
+
+<section id="projects" class="card-section">
+
+<h2> My Projects</h2>
+
+<p>Encrypter-decrypter, ATYS, this website, and a few other random things.</p>
+
+<p>
+Check out my LinkedIn:
+<a class="project-link" href="https://www.linkedin.com/in/ada-bardiz-b1a2092bb">open linkedin</a>
+</p>
+
+<p>
+Sometimes I post WIP stuff on GitHub:
+<a class="project-link" href="https://github.com/">open github</a>
+</p>
+
+</section>
+
+
+<section id="silly-zone" class="card-section">
+
+<h2> Laika's minigame</h2>
+
+<p>pls pet my dog she deserves it </p>
+
+<button onclick="petTheDog()" class="cute-btn">
+Pet Laika!
+</button>
+
+<p class="pet-counter">
+Total Pets:
+<span id="pet-count">0</span>
+</p>
+
+</section>
+
+
+<script>
+
+let pets = 0;
+
+function petTheDog(){
+
+    pets++;
+
+    document.getElementById("pet-count").textContent = pets;
+    document.getElementById("dog").style.transform = "scale(1.05)";
+    setTimeout(() => {
+        document.getElementById("dog").style.transform = "scale(1)";
+    }, 150);
+
+    if(pets == 10){
+        alert("she's super happy now!!");
+    }
+
+}
+
+</script>
+
+</body>
